@@ -1,4 +1,4 @@
-# Copyright (C) 2007-2011 LuaDist.
+# Copyright (C) 2007-2012 LuaDist.
 # Created by Félix A.A.
 # Redistribution and use of this file is allowed according to the terms of the MIT license.
 # For details see the COPYRIGHT file distributed with LuaDist.
@@ -6,18 +6,18 @@
 
 project ( lua-openssl C )
 cmake_minimum_required ( VERSION 2.8 )
-include ( dist.cmake )
+include ( cmake/dist.cmake )
+include ( lua )
 
-find_package(OpenSSL REQUIRED)
+find_package ( OpenSSL REQUIRED )
 
 # lua-openssl modules
-install_lua_module( openssl src/auxiliar.c src/bio.c src/cipher.c src/crl.c src/csr.c
-                                src/digest.c src/misc.c src/openssl.c src/pkcs12.c src/pkcs7.c
-                                src/pkey.c src/x509.c src/conf.c src/ots.c LINK ${OPENSSL_CRYPTO_LIBRARY} ${OPENSSL_SSL_LIBRARY})
-
+install_lua_module ( openssl src/auxiliar.c src/bio.c src/cipher.c src/crl.c src/csr.c 
+  src/digest.c src/misc.c src/openssl.c src/pkcs12.c src/pkcs7.c src/pkey.c src/x509.c 
+  src/conf.c src/ots.c LINK ${OPENSSL_CRYPTO_LIBRARY} ${OPENSSL_SSL_LIBRARY} )
 
 # Install lua-openssl Documentation
-install_data( README STATE )
+install_data ( README STATE )
 
 # Install Tests
-install_test( test/ )
+install_test ( test/ )
