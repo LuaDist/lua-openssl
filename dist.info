@@ -1,0 +1,36 @@
+type = "x86_64"
+arch = "Ubuntu"
+author = "George Zhao"
+depends = {
+[[lua ~>5.1]],
+[[openssl >= 0.9.8]],
+}
+
+desc = "OpenSSL binding for Lua."
+version = "0.1.1"
+maintainer = "Félix A.A."
+files = {
+Unspecified = {
+[[lib/lua/openssl.so]],
+[[share/lua-openssl/README]],
+[[share/lua-openssl/STATE]],
+[[share/lua-openssl/test//7.crl.lua]],
+[[share/lua-openssl/test//pkey.lua]],
+[[share/lua-openssl/test//util.lua]],
+[[share/lua-openssl/test//0.misc.lua]],
+[[share/lua-openssl/test//x509.lua]],
+[[share/lua-openssl/test//4.cipher.lua]],
+[[share/lua-openssl/test//2.x509.lua]],
+[[share/lua-openssl/test//5.digest.lua]],
+[[share/lua-openssl/test//sample.lua]],
+[[share/lua-openssl/test//7.csr.lua]],
+[[share/lua-openssl/test//digest.lua]],
+[[share/lua-openssl/test//cipher.lua]],
+[[share/lua-openssl/test//3.pkey.lua]],
+}
+,
+}
+
+license = "MIT"
+name = "lua-openssl"
+url = "https://github.com/zhaozg/lua-openssl"
